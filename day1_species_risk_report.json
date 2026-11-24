@@ -1,0 +1,128 @@
+[
+  {
+    "timestamp_utc": "2026-11-24T13:10:30.929194+00:00",
+    "species_id": "kiwi_brown_ni",
+    "common_name": "North Island Brown Kiwi",
+    "scientific_name": "Apteryx mantelli",
+    "gbif_taxon_key": 2495144,
+    "risk_score": 0.12,
+    "cohort": "STABLE",
+    "top_3_drivers": [
+      {
+        "factor": "Environmental & Weather Stress",
+        "impact": 0.08,
+        "detail": "37d avg max temp 18.32C, rain 170.5mm"
+      },
+      {
+        "factor": "Observation / Population Sparsity",
+        "impact": 0.04,
+        "detail": "401 public GBIF records logged in 2025"
+      },
+      {
+        "factor": "Recent Occurrence Trend (2025 vs 2022-24 avg)",
+        "impact": 0.0,
+        "detail": "2025 records: 401 vs 3-yr avg 303.3 (32.2%)"
+      }
+    ],
+    "recommended_action": {
+      "window": "Nightly (18:00-04:00)",
+      "action": "Dispatch stoat-trap checks, dog-roaming patrols, and chick-lift checks in high-risk bush pockets."
+    },
+    "raw_signals": {
+      "gbif_yearly_counts": {
+        "2022": 235,
+        "2023": 339,
+        "2024": 336,
+        "2025": 401
+      },
+      "open_meteo_37d": {
+        "avg_daily_max_temp_c_37d": 18.32,
+        "total_precip_mm_37d": 170.5
+      }
+    }
+  },
+  {
+    "timestamp_utc": "2026-11-24T13:10:37.563394+00:00",
+    "species_id": "penguin_african",
+    "common_name": "African Penguin",
+    "scientific_name": "Spheniscus demersus",
+    "gbif_taxon_key": 5229384,
+    "risk_score": 0.26,
+    "cohort": "STABLE",
+    "top_3_drivers": [
+      {
+        "factor": "Environmental & Weather Stress",
+        "impact": 0.22,
+        "detail": "Warm thermal window (21.49C avg max) for cold/coastal habitat"
+      },
+      {
+        "factor": "Observation / Population Sparsity",
+        "impact": 0.04,
+        "detail": "1901 public GBIF records logged in 2025"
+      },
+      {
+        "factor": "Recent Occurrence Trend (2025 vs 2022-24 avg)",
+        "impact": 0.0,
+        "detail": "2025 records: 1901 vs 3-yr avg 1368.7 (38.9%)"
+      }
+    ],
+    "recommended_action": {
+      "window": "Dawn / Dusk Colony Window",
+      "action": "Monitor foraging-trip anomalies and coordinate colony prey/fishery-buffer alerts."
+    },
+    "raw_signals": {
+      "gbif_yearly_counts": {
+        "2022": 1160,
+        "2023": 1395,
+        "2024": 1551,
+        "2025": 1901
+      },
+      "open_meteo_37d": {
+        "avg_daily_max_temp_c_37d": 21.49,
+        "total_precip_mm_37d": 3.0
+      }
+    }
+  },
+  {
+    "timestamp_utc": "2026-11-24T13:10:43.324701+00:00",
+    "species_id": "penguin_emperor",
+    "common_name": "Emperor Penguin",
+    "scientific_name": "Aptenodytes forsteri",
+    "gbif_taxon_key": 2481661,
+    "risk_score": 0.21,
+    "cohort": "STABLE",
+    "top_3_drivers": [
+      {
+        "factor": "Observation / Population Sparsity",
+        "impact": 0.12,
+        "detail": "216 public GBIF records logged in 2025"
+      },
+      {
+        "factor": "Environmental & Weather Stress",
+        "impact": 0.08,
+        "detail": "37d avg max temp -6.13C, rain 23.4mm"
+      },
+      {
+        "factor": "Recent Occurrence Trend (2025 vs 2022-24 avg)",
+        "impact": 0.01,
+        "detail": "2025 records: 216 vs 3-yr avg 219.0 (-1.4%)"
+      }
+    ],
+    "recommended_action": {
+      "window": "Pre-Fledging Watch (Sep-Nov)",
+      "action": "Track extreme cold/wind/ice-breakup anomalies and alert coastal monitoring stations."
+    },
+    "raw_signals": {
+      "gbif_yearly_counts": {
+        "2022": 210,
+        "2023": 186,
+        "2024": 261,
+        "2025": 216
+      },
+      "open_meteo_37d": {
+        "avg_daily_max_temp_c_37d": -6.13,
+        "total_precip_mm_37d": 23.4
+      }
+    }
+  }
+]
