@@ -1,0 +1,72 @@
+[
+  {
+    "scored_at_utc": "2026-11-25T12:08:25.037808+00:00",
+    "common_name": "North Island Brown Kiwi",
+    "scientific_name": "Apteryx mantelli",
+    "risk_score": 0.83,
+    "cohort": "HIGH-RISK",
+    "top_3_drivers": [
+      {
+        "factor": "2026 vs 2025 Occurrence Pace",
+        "impact": 0.286,
+        "detail": "2026: 66 vs 2025: 401"
+      },
+      {
+        "factor": "Recent Local Checklist Coverage (14d / 50km)",
+        "impact": 0.24,
+        "detail": "eBird 14d obs: 65, iNat 250km: 300"
+      },
+      {
+        "factor": "Regional Community Observation Density",
+        "impact": 0.18,
+        "detail": "iNaturalist 250km total: 300"
+      }
+    ],
+    "live_summary": {
+      "gbif_2025": 401,
+      "gbif_2026": 66,
+      "inat_250km": 300,
+      "ebird_14d_50km": 65,
+      "temp_c": 13.5,
+      "wind_speed_10m": 10.8,
+      "sea_surface_temperature": null,
+      "wave_height": null
+    },
+    "intervention_note": "Given the high risk score and significant decline in occurrence pace (2026 vs 2025), immediate action is required to halt the decline in North Island Brown Kiwi populations. We recommend a field check to assess local populations and habitat conditions, followed by implementing targeted conservation measures within the next 30 days to address the observed decline."
+  },
+  {
+    "scored_at_utc": "2026-11-25T12:08:28.438879+00:00",
+    "common_name": "African Penguin",
+    "scientific_name": "Spheniscus demersus",
+    "risk_score": 0.75,
+    "cohort": "HIGH-RISK",
+    "top_3_drivers": [
+      {
+        "factor": "Environmental & Marine Stress",
+        "impact": 0.36,
+        "detail": "temp 19.3C, wind 31.8, SST 14.2C, wave 1.66m"
+      },
+      {
+        "factor": "2026 vs 2025 Occurrence Pace",
+        "impact": 0.191,
+        "detail": "2026: 776 vs 2025: 1898"
+      },
+      {
+        "factor": "Recent Local Checklist Coverage (14d / 50km)",
+        "impact": 0.12,
+        "detail": "eBird 14d obs: 181, iNat 250km: 5135"
+      }
+    ],
+    "live_summary": {
+      "gbif_2025": 1898,
+      "gbif_2026": 776,
+      "inat_250km": 5135,
+      "ebird_14d_50km": 181,
+      "temp_c": 19.3,
+      "wind_speed_10m": 31.8,
+      "sea_surface_temperature": 14.2,
+      "wave_height": 1.66
+    },
+    "intervention_note": "Immediate Action: Conduct targeted local habitat assessments and implement measures to mitigate environmental stressors such as elevated water temperatures and increased wave heights. Immediate field check: Verify the accuracy of recent observational data from eBird and iNaturalist, ensuring they align with long-term conservation goals."
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "name": "Avion High-Risk Alerts",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "avion-high-risk ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1be00993-5968-4e72-be8c-6628b5174c57",
+      "name": "Webhook",
+      "webhookId": "709cda38-6b27-40c2-b7b3-6676ce30e342"
+    },
+    {
+      "parameters": {
+        "jsCode": "const firstJson = $input.first()?.json ?? {};\nconst alerts = firstJson.body?.alerts ?? firstJson.alerts ?? [];\n\nif (!Array.isArray(alerts) || alerts.length === 0) {\n  return [];\n}\n\nreturn alerts.map((alert) => ({\n  json: alert,\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "9ef97de4-2fa9-49c3-bbb8-f1011420bae7",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "chatId": "6735408782",
+        "text": "=🚨 AVION {{ $json.cohort }} ALERT ({{ $json.risk_score }}) Species: {{ $json.common_name }} ({{ $json.scientific_name }}) Top Driver: {{ $json.top_3_drivers[0].factor }} — {{ $json.top_3_drivers[0].detail }} Triage Note: {{ $json.intervention_note }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "0d26a8f3-f770-4a85-8a9f-ea26a29dd9c5",
+      "name": "Send a text message",
+      "webhookId": "be0a6168-4fb9-4d88-8b6b-6a3fd0d331a5",
+      "credentials": {
+        "telegramApi": {
+          "id": "l1QZUZkvyfyihrUz",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "230987cb-a3e1-4f3d-9423-ac56359b7cea",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a7e72bb6cb8f8c2a46fd4d8ff6fbe0e421b6b7d88c401ecf4891e967d6c98c34"
+  },
+  "nodeGroups": [],
+  "id": "qo7slbKjVnJppBbC",
+  "tags": []
+}
