@@ -4,13 +4,21 @@ import sqlite3
 from typing import Any, Dict, List
 import requests
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Avion Risk & Triage API", version="0.4.0")
+app = FastAPI(title="Avion Risk & Triage API", version="0.5.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 DB_PATH = "avian_nova.db"
 JSON_PATH = "day4_scored_interventions.json"
 N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL", "http://localhost:5678/webhook/avion-high-risk")
-
 
 @app.get("/health")
 def health() -> Dict[str, Any]:
